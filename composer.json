@@ -10,7 +10,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Suraj Dott",
+            "name": "Suraj Datheputhe",
             "email": "surajdatheputhe@gmail.com"
         }
     ],
@@ -18,8 +18,10 @@
         "php": "^8.1"
     },
     "require-dev": {
+        "phpstan/phpstan": "^1.12",
         "phpunit/phpunit": "^11.0.9",
-        "orchestra/testbench": "^9.0.0"
+        "orchestra/testbench": "^9.0.0",
+        "squizlabs/php_codesniffer": "^3.10"
     },
     "autoload": {
         "psr-4": {
