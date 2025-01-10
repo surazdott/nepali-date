@@ -1,14 +1,16 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests;
 
 use Carbon\Carbon;
 use NepaliDate\Services\NepaliDate;
 use Orchestra\Testbench\TestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class NepaliDateTest extends TestCase
 {
-    public function test_check_toBS()
+    #[Test]
+    public function test_check_toBS(): void
     {
         $englishDate = Carbon::create('2024-04-03');
         $nepaliDate = new NepaliDate();
@@ -17,7 +19,8 @@ class NepaliDateTest extends TestCase
         $this->assertEquals('2080-12-21', $nepaliDate);
     }
 
-    public function test_check_toBSFormat()
+    #[Test]
+    public function test_check_toBSFormat(): void
     {
         $englishDate = Carbon::create('2024-04-03');
         $nepaliDate = new NepaliDate();
@@ -26,7 +29,8 @@ class NepaliDateTest extends TestCase
         $this->assertEquals('2080/12/21', $nepaliDate);
     }
 
-    public function test_check_toFormattedBSDate()
+    #[Test]
+    public function test_check_toFormattedBSDate(): void
     {
         $englishDate = Carbon::create('2024-04-03');
         $nepaliDate = new NepaliDate();

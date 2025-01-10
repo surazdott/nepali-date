@@ -13,8 +13,6 @@ class NepaliDate
 
     /**
      * Create a NepaliDate instance from a given Carbon date.
-     *
-     * @param  Carbon  $date  The Carbon date instance.
      */
     public function create(Carbon $date): self
     {

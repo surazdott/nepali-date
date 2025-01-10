@@ -1,5 +1,11 @@
 # Laravel Nepali Date
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/surazdott/nepali-date/main/art/image.png" width="600" alt="Laravel Nepali Date">
+    <p align="center"><a href="https://github.com/surazdott/nepali-date/actions"><img alt="GitHub Workflow Status (main)" src="https://img.shields.io/github/actions/workflow/status/surazdott/nepali-date/tests.yml?branch=main&label=tests&style=round-square"></a> <a href="https://packagist.org/packages/surazdott/nepali-date"><img alt="Latest Version" src="https://img.shields.io/packagist/v/surazdott/nepali-date"></a> <img alt="CodeFactor" src="https://www.codefactor.io/repository/github/surazdott/nepali-date/badge"></a> <a href="https://packagist.org/packages/surazdott/nepali-date"><img alt="License" src="https://img.shields.io/github/license/surazdott/nepali-date"></a>
+    </p>
+</p>
+
 ## Introduction
 Laravel Nepali Date package is a package integrates seamlessly with Laravel, allowing developers to effortlessly manage date conversions according to the Nepali calendar system.
 
@@ -11,7 +17,7 @@ composer require surazdott/nepali-date
 ```
 
 ## Basic usages
-Laravel will automatically discover this package. Hence, you don't need to add the service provider manually.
+Laravel will automatically discover this package. Hence, you don't need to add the service provider manually. It supports Nepali dates up to 2100 BS.
 
 Let's look at a simple example using Facade:
 
