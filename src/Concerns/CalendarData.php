@@ -20,9 +20,9 @@ trait CalendarData
     public int $day;
 
     /**
-     * @var array $calendarData.
-     *
      * Calender data with year and months.
+     *
+     * @var array<int, array<int>> $calendarData
      */
     private array $calendarData = [
         0 => [2000, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
@@ -125,11 +125,13 @@ trait CalendarData
         97 => [2097, 31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
         98 => [2098, 31, 31, 32, 31, 31, 31, 29, 30, 29, 30, 29, 31],
         99 => [2099, 31, 31, 32, 31, 31, 31, 30, 29, 29, 30, 30, 30],
-        91 => [2100, 31, 32, 31, 32, 30, 31, 30, 29, 30, 29, 30, 30],
+        100 => [2100, 31, 32, 31, 32, 30, 31, 30, 29, 30, 29, 30, 30],
     ];
 
     /**
      * Months in Nepali date Bikram Sambat (BS).
+     *
+     * @var array<int, string> $monthsInBS
      */
     private array $monthsInBS = [
         1 => 'Baishakh',
@@ -148,6 +150,8 @@ trait CalendarData
 
     /**
      * Days name in week for Bikram Sambat (BS).
+     *
+     * @var array<int, string> $dayOfWeekInBS
      */
     private array $dayOfWeekInBS = [
         1 => 'Sunday',
@@ -161,6 +165,8 @@ trait CalendarData
 
     /**
      * Month names in Nepali language.
+     *
+     * @var array<int, string> $monthsInNepali
      */
     private array $monthsInNepali = [
         1 => 'वैशाख',
@@ -179,6 +185,8 @@ trait CalendarData
 
     /**
      * Week name in Nepali language.
+     *
+     * @var array<int, string> $dayOfWeekInNepali
      */
     private array $dayOfWeekInNepali = [
         1 => 'आइतवार',
@@ -192,6 +200,8 @@ trait CalendarData
 
     /**
      * Numbers in Nepali language.
+     *
+     * @var array<int, string> $numbersInNepali
      */
     private array $numbersInNepali = [
         0 => '०',
@@ -207,12 +217,16 @@ trait CalendarData
     ];
 
     /**
-     * Nepali normal days.
+     * Normal days in month in English (AD).
+     *
+     * @var array<int> $normalMonths
      */
     private array $normalMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     /**
      * Leap months in Englsih (AD).
+     *
+     * @var array<int> $leapMonths
      */
     private array $leapMonths = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -228,12 +242,16 @@ trait CalendarData
 
     /**
      * Nepali days 17 - 1
+     *
+     * @var int $nepaliDay
      */
     public int $nepaliDay = 16;
 
     /**
-     * @var int Days of week i.e 7 - 1
      * 0 for sunday, 6 for saturday.
+     * Days of week i.e 7 - 1
+     *
+     * @var int $dayOfWeek
      */
     public int $dayOfWeek = 6;
 }

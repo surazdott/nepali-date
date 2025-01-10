@@ -3,7 +3,6 @@
 namespace NepaliDate\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use NepaliDate\Facades\NepaliDate;
 use NepaliDate\Services\NepaliDate as NepaliDateService;
 
 class NepaliDateServiceProvider extends ServiceProvider

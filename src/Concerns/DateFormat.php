@@ -14,10 +14,8 @@ trait DateFormat
 
     /**
      * Get the Nepali date in the custome format.
-     *
-     * @param  string  $format
      */
-    public function toBSformat($format): string
+    public function toBSformat(string $format): string
     {
         $search = ['Y', 'm', 'd', 'l', 'F'];
 
@@ -56,10 +54,8 @@ trait DateFormat
 
     /**
      * Get the date in the formatted Nepali date string.
-     *
-     * @param  string  $format
      */
-    public function toNepaliFormat($format): string
+    public function toNepaliFormat(string $format): string
     {
         $search = ['Y', 'm', 'd', 'F', 'l'];
 

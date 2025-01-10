@@ -6,10 +6,8 @@ trait DateConverter
 {
     /**
      * Check if the given year is a leap year or not.
-     *
-     * @param  int  $year  The year to check.
      */
-    public function isLeapYear($year): bool
+    public function isLeapYear(int $year): bool
     {
         return $year % 100 == 0
             ? ($year % 400 == 0 ? true : false)
@@ -18,12 +16,8 @@ trait DateConverter
 
     /**
      * Calculate the total number of days passed in English calendar from a given date.
-     *
-     * @param  int  $year  The year.
-     * @param  int  $month  The month.
-     * @param  int  $day  The day.
      */
-    public function calculateTotalEnglishDays($year, $month, $day): int
+    public function calculateTotalEnglishDays(int $year, int $month, int $day): int
     {
         $totalEnglishDays = 0;
 
@@ -49,11 +43,8 @@ trait DateConverter
 
     /**
      * Perform calculation based on the total number of English days
-     * Passed to determine Nepali date.
-     *
-     * @param  int  $totalEngilishDays  The total number of days passed in English calendar.
      */
-    public function performCalculationbasedOn($totalEngilishDays)
+    public function performCalculationbasedOn(int $totalEngilishDays): void
     {
         $i = 0;
         $j = $this->nepaliMonth;
@@ -101,51 +92,40 @@ trait DateConverter
 
     /**
      * Return the formatted name of the month in the Bikram Sambat (BS) calendar.
-     *
-     * @param  int  $month  The numeric representation of the month (1-12).
      */
-    public function formattedBSMonth($month): string
+    public function formattedBSMonth(int $month): string
     {
         return $this->monthsInBS[$month];
     }
 
     /**
      * Return the formatted name of the day of the week in the Bikram Sambat (BS) calendar.
-     *
-     * @param  int  $dayOfWeek  The numeric representation of the day of the week (1-7).
-     * @return string The formatted name of the day of the week in the BS calendar.
      */
-    public function formattedBSDateOfWeek($dayOfWeek): string
+    public function formattedBSDateOfWeek(int $dayOfWeek): string
     {
         return $this->dayOfWeekInBS[$dayOfWeek];
     }
 
     /**
      * Return the formatted name of the month in the Nepali calendar.
-     *
-     * @param  int  $month  The numeric representation of the month (1-12).
      */
-    public function formattedNepaliMonth($month): string
+    public function formattedNepaliMonth(int $month): string
     {
         return $this->monthsInNepali[$month];
     }
 
     /**
      * Return the formatted name of the day of the week in the Nepali calendar.
-     *
-     * @param  int  $dayOfWeek  The numeric representation of the day of the week.
      */
-    public function formattedNepaliDateOfWeek($dayOfWeek): string
+    public function formattedNepaliDateOfWeek(int $dayOfWeek): string
     {
         return $this->dayOfWeekInNepali[$dayOfWeek];
     }
 
     /**
      * Return the formatted Nepali representation of a number.
-     *
-     * @param  int|string  $value  The numeric value to be formatted.
      */
-    public function formattedNepaliNumber($value): string
+    public function formattedNepaliNumber(mixed $value): string
     {
         $numbers = str_split($value);
 
@@ -158,11 +138,8 @@ trait DateConverter
 
     /**
      * Set the Nepali date based on the provided English date.
-     *
-     * @param  int  $year  The year in English calendar.
-     * @param  int  $month  The month in English calendar.
      */
-    private function setNepaliDate($year, $month, $day): void
+    private function setNepaliDate(int $year, int $month, int $day): void
     {
         $totalEngilishDays = $this->calculateTotalEnglishDays(
             $year,
