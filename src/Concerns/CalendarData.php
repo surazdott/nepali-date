@@ -237,7 +237,7 @@ trait CalendarData
 
     /**
      * Nepali date starting month.
-     * 
+     *
      * @var int
      */
     public int $nepaliMonth = 9;
